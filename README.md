@@ -38,7 +38,7 @@ In this assignment, I was tasked to implement front-end data validation with jav
 If an error was present, I styled my code to highlight any errors/missing data upon submission (textbox would be in focus) to draw the users attention to them.
 
 
-## Jquery Web Validations
+## JQuery Web Validations
 *HTML, CSS portions were provided. i.e index.html, process.html, listitems.html are not my design/code.*
 
 In this assignment, I was tasked to implement front-end data validation with jquery. Prior to submission, my code would check for the following.
