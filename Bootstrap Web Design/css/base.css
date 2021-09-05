@@ -1,0 +1,150 @@
+@charset "utf-8";
+/* NAV*/
+.navbar {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:lightgrey;
+    max-width: 95%;
+    overflow: hidden;
+}
+
+.navbar-brand h1 {
+    color: darkred;
+    font-size: 3em;
+    font-style: italic;
+}
+
+.navbar-brand:hover h1 {
+    color: firebrick;
+    text-decoration: underline;
+}
+
+button.navbar-toggler{
+   background-color: darkgrey;
+}
+
+ul.navbar-nav {
+    margin: 0.5em;
+}
+
+li.nav-item {
+    margin: 0.75em;
+    padding: 0.05em 0.5em;
+    background-color:darkred;
+    border-radius: 5px;
+}
+
+a.nav-link {
+    color: white;
+    font-size: 1.25em;
+    text-decoration: none;
+}
+
+a.nav-link:hover {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+/*JUMBOTRON*/
+.jumbotron {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    display: block;
+    max-width: 100%;
+}
+
+.jumbotron h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0.05em;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.jumbotron h3 {
+    color: darkred;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.jumbotron p  {
+    font-size: 1.2em;
+    margin-top: 0.02em;
+    margin-bottom: 0.02em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    padding: 0.5em;
+    text-align: center;
+}
+
+/*IMG*/
+#AboutUs img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:0.5em;
+    margin-bottom: 0.5em;
+    height: auto;
+    max-width: 90%;
+
+}
+
+#GalleryCarousel img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-caption h3{
+    color: whitesmoke;
+}
+
+#DelForm img {
+    display: block;
+    float: right;
+    height: auto;
+    max-width: 45%;
+    margin: 0.15em 1em 4em 2em;
+}
+
+/* FOOTER */
+div.card{
+    background-color:lightgrey;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 95%;
+    min-height:370px;
+}
+
+#ContactUs h3 {
+    color: darkred;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#ContactUs a:hover {
+    color: firebrick;
+    font-weight: bold;
+    text-decoration: underline
+}
+
+#LocationMap h3 {
+    color: darkred;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#LocationMap img {
+    width: 100%;
+}
+
+
+

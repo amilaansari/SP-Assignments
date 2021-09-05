@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Seafood, Restaurent, Singapore">
+    <title>Yi Jia South Village Seafood Delivery</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+<!--Navigation Bar-->
+    <header>
+        <nav>
+            <h1>Yi Jia South Village Seafood</h1>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="delivery.html">Delivery</a></li>
+            </ul>
+        </nav>
+    </header>
+<!--Main Section: Delivery Form-->
+    <section id="DelForm">
+
+        <h2>Delivery Form</h2>
+        <img src="img/delivery.jpg" alt="delivery">
+        <!--Image taken from http://yijiasouthvillage.com.sg/-->
+        <p id="DelFormNotes">
+            Please input the relevant details below!
+        </p>
+
+        <form action="" method="get">
+<!--Choose between Home Delivery or Self-Pickup-->            
+            <div id="DelOptions">
+                <label for="DeliveryOptionsID">Delivery Options:</label>
+                <select name="DeliveryOptions" 
+                        id="DeliveryOptionsID">
+                    <option value="0">Home Delivery</option>
+                    <option value="1">Self-Pickup</option>
+                </select>
+            </div>
+<!--Input users First and Last Name-->
+            <div id="DelName">
+                <label for="NameID">Name:</label>
+                <input type="text"
+                        name="Name"
+                        id="NameID"
+                        placeholder="First & Last Name"
+                        title="Input First & Last Name"
+                        required
+                        pattern="[a-zA-z]+\s+[a-zA-Z]+">
+            </div>
+<!--Input users Address-->
+            <div id="DelAddress">
+                <label for="AddressID">Delivery Address:</label>
+                <input type="text"
+                        name="Address"
+                        id="AddressID"
+                        placeholder="Delivery Address"
+                        title="Input Delivery Address"
+                        required>
+            </div>
+<!--Input users Postal Code-->
+            <div id="DelPostal">
+                <label for="PostalID">Postal Code:</label>
+                <input type="text"
+                        name="Postal"
+                        id="PostalID"
+                        placeholder="Sxxx xxx"
+                        required>
+            </div>
+<!--Input users Phone Number-->            
+            <div id="DelPhone">
+                <label for="PhoneID">Phone No:</label>
+                <input type="text"
+                        name="Phone"
+                        id="PhoneID"
+                        placeholder="xxxx xxxx"
+                        title="Input Phone Number"
+                        required
+                        pattern="\d{8}|\d{4}[\s-]\d{4}">
+            </div>
+<!--Choose preferred Delivery/Pickup Time-->   
+            <div id="DelTimes">
+                <label for="DeliveryTimesID">Delivery Times:</label>
+                <select name="DeliveryTimes" 
+                        id="DeliveryTimesID">
+                    <option value="0">12:00-13:00</option>
+                    <option value="1">13:00-14:00</option>
+                    <option value="2">14:00-15:00</option>
+                    <option value="3">18:00-19:00</option>
+                    <option value="4">19:00-20:00</option>
+                    <option value="5">20:00-21:00</option>
+                </select>
+            </div>
+<!--Select Cutlery preference-->            
+            <div id="DelCutlery">
+                <label>Cutlery Options*:</label>
+    
+                    <label for="NoCutleryID">No Cutlery Requested</label>
+                    <input type="checkbox"
+                            name="NoCutlery"
+                            id="NoCutleryID">
+                    
+                    <label for="AddCutleryID">Additional Cutlery Requested</label>
+                    <input type="checkbox"
+                            name="AddCutlery"
+                            id="AddCutleryID">
+
+                <p id="CutleryOptions">
+                    *cutlery will be provided by default,
+                    unless otherwise requested.
+                </p>
+
+            </div>
+<!--Reset and Submission Buttons-->         
+            <div id="DelButtons">
+                <input type="reset" value="Clear All">
+                <input type="submit" value="Order Now!">
+            </div>
+
+        </form>
+
+    </section>
+<!--Contact and Location Information-->
+    <footer>
+        <h3>Contact Us</h3>
+        <p>
+            Monday to Sunday, 11:00-23:00<br>
+            550-552 Macpherson Road, Citimac Building<br>
+            Singapore | 368229<br>
+            <a href="tel+6567478263">+65 67478263</a>
+        </p> 
+    </footer>
+</body>
+</html>
