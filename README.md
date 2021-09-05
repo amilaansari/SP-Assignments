@@ -29,7 +29,7 @@ In this assignment, I was tasked to "redesign" an existing food delivery website
 
 
 ## Javascript Web Validations
-*HTML, CSS portions were provided. index.html, process.html are not my design/code*
+*HTML, CSS portions were provided. i.e index.html, process.html are not my design/code*
 
 In this assignment, I was tasked to implement front-end data validation with javascript. Prior to submission, my code would check for the following. 
 - Empty fields and/or if a selection was made (i.e "Halal" radio button) 
@@ -39,7 +39,7 @@ If an error was present, I styled my code to highlight any errors/missing data u
 
 
 ## Jquery Web Validations
-*HTML, CSS portions were provided. index.html, process.html, listitems.html are not my design/code.*
+*HTML, CSS portions were provided. i.e index.html, process.html, listitems.html are not my design/code.*
 
 In this assignment, I was tasked to implement front-end data validation with jquery. Prior to submission, my code would check for the following.
 - Empty fields and/or if a selection was made (i.e "Halal" radio button)
