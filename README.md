@@ -28,7 +28,7 @@ In this assignment, I was tasked to create a full stack web application with HTM
 In this assignment, I was tasked to "redesign" an existing food delivery website. Tables were used to store menu data, Forms were used to collect information from the user.
 
 
-## Javascript Web Validations
+## JavaScript Web Validations
 *HTML, CSS portions were provided. i.e index.html, process.html are not my design/code*
 
 In this assignment, I was tasked to implement front-end data validation with javascript. Prior to submission, my code would check for the following. 
