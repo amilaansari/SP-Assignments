@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src= "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(function(){
+//start with disabled delete button, no selection/or click is made
+if  ( !( $("#western").is(":checked") )
+		&& !( $("#malay").is(":checked") )
+		&& !( $("#indian").is(":checked") )
+		&& !( $("#chinese").is(":checked") ) ) {
+			$("#delete").prop("disabled", true);
+	}
+
+//use checkboxes to allow users to select one/all items at once
+$("#selectAll").on("click", function() {
+	if ( $("#selectAll").is(":checked") ) {
+		$(":checkbox").each(function(){
+			this.checked = true;
+		});
+	}
+	else {
+			$(":checkbox").each(function(){
+			this.checked = false;
+		});
+	}
+})	
+//disable delete button if no selection is made
+$(":checkbox").on("click", function() {
+	if  ( !( $("#western").is(":checked") )
+		&& !( $("#malay").is(":checked") )
+		&& !( $("#indian").is(":checked") )
+		&& !( $("#chinese").is(":checked") ) ) {
+			$("#delete").prop("disabled", true);
+	}
+})
+
+//enable delete button if one or more rows is selected
+$(":checkbox").on("click", function() {
+	if ( $("#western").is(":checked") 
+		|| $("#malay").is(":checked") 
+		|| $("#indian").is(":checked") 
+		|| $("#chinese").is(":checked") ) {
+			$("#delete").prop("disabled", false)
+	}
+})
+//end script
+});
+	
+</script>
+	
+<style>
+		body {
+			font-family: Sans-serif;
+		}
+		
+		table,td {
+			border: 1px solid black;
+		}
+		
+		.tr_header td{
+			background-color: #FFF000;
+			font-weight: bold;
+		}
+		
+		h1 {
+			color: #7157ff;
+		}
+</style>
+
+</head>
+<body>
+	<h1>Edit Food Type</h1>
+	<form action="process.html" id= "form" name = "Form" method="POST">
+	<table>
+		<tbody><tr class="tr_header">
+			<td>
+				<input type="checkbox" id="selectAll">
+			</td>
+			<td>
+				ALL
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="checkbox" id="western" name="Western">
+			</td>
+			<td>
+				Western
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="checkbox" id="malay" name="Malay">
+			</td>
+			<td>
+				Malay
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="checkbox" id="indian" name="Indian">
+			</td>
+			<td>
+				Indian
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="checkbox" id="chinese" name="Chinese" >
+			</td>
+			<td>
+				Chinese
+			</td>
+		</tr>
+	</tbody></table>
+	<br>
+	<button id="delete" value="Delete" style = "font-size: medium;">Delete</button>
+</form>
+	
+</body>
+</html>

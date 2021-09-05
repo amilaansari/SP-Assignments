@@ -1,0 +1,149 @@
+@charset "utf-8";
+/* HTML */
+html {
+    background-color: lemonchiffon;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 100%;
+}
+
+/* BODY */
+body {
+    box-sizing: border-box;
+    font-size: 1.2em;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 640px;
+    max-width: 1280px;
+    width: 95%;
+}
+
+/* HEADERs */
+h1 {
+    color: darkred;
+    font-size: 3em;
+    font-style: italic;
+}
+
+h2 {
+    color: black;
+    font-size: 2em;
+    text-align: center;
+    text-decoration: underline;
+}
+
+h3 {
+    color: darkred;
+    font-size: 1.35em;
+    margin-bottom: 0.03em;
+    text-align: center;
+}
+
+/* NAV */
+nav {
+    border: 3px solid  #fff280;
+    background-color: #fff7b3;
+    margin: 0.5em;
+    padding: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 90%;
+}
+
+nav h1 {
+    display: block;
+    margin: 0.25em;
+    text-align: center;
+}
+
+nav ul {
+    display: block;
+    margin: 0.25em;
+    padding: 0.25em;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin: 0.5em 1em;
+}
+
+nav a {
+    color: black;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: firebrick;
+    font-size: 1.45em;
+    text-decoration: underline;
+}
+
+/*IMG*/
+#AboutUs img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    max-width: 90%;
+}
+
+#DelForm img {
+    display: block;
+    float: right;
+    height: auto;
+    max-width: 40%;
+}
+
+/*ARTICLE*/
+article {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+}
+
+article h2 {
+    margin-bottom: 0.02em;
+}
+
+article p {
+    margin-top: 0.02em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    padding: 0.5em;
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    border: 3px solid  #fff280;
+    background-color: #fff7b3;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+footer h3 {
+    font-size: 1em;
+    margin-bottom: 0.01em;
+}
+
+footer p {
+    font-size: 0.8em;
+    margin-top: 0.01em;
+    padding: 0.25em;
+}
+
+footer a:hover {
+    color: firebrick;
+    font-weight: bold;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+

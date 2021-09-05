@@ -1,0 +1,47 @@
+#DelForm h2 {
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: left;
+    margin-left: 0.5em;
+    margin-bottom: 0.02em;
+}
+
+#DelFormNotes {
+    font-size: 1em;
+    font-weight: bold;
+    color: darkred;
+    text-align: left;
+    margin-left: 0.5em;
+    margin-top: 0.02em;
+}
+
+#CutleryOptions {
+    font-size: 0.8em;
+    font-style: italic;
+    text-align: left;
+}
+
+#CutleryOptions p{
+    text-align: left;
+    font-size: 0.9em;
+    margin-top: -2em;
+    margin-left: -0.03em;
+}
+
+label:hover {
+    color: firebrick;
+}
+
+#DelButtons button {
+    background-color:darkred;
+    color: white;
+    margin: 1em;
+    padding: 0.35em 0.55em;
+    font-size: 1.25em;
+}
+
+#DelButtons button:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}

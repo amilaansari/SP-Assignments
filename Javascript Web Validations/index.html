@@ -1,0 +1,149 @@
+<html>
+<head>
+<style>	
+	h1 {
+		color: #7157ff;
+	}
+
+	hr {
+		display: block;
+		border: 0;
+		border-top: 3px solid #f90;
+		padding: 0; 
+	}
+	
+	textarea {
+		width: 70%;
+	}
+	
+	#div_main {
+		font-family: Sans-serif;
+		margin: auto;
+		margin-top: 30px;
+		width: 500px;
+	}
+	
+	#div_left {
+		width: 150px;
+		display: inline-block;
+		float: left;
+	}
+	
+	#div_left p {
+		margin-bottom: 19px;
+	}
+	
+	#div_right {
+		width: 350px;
+		display: inline-block;
+		float: right;
+	}
+	
+	.clear {
+		clear: both;
+	}
+</style>
+<script>
+	function verifyInput(){
+    var letters = /^[A-Za-z]+$/;
+//check if Name field is empty
+    if(document.Form.txtProductName.value == ""){
+        document.Form.txtProductName.focus();
+        document.getElementById("divMessage").innerHTML = "Name of Food is required"
+        return false;
+//check if Food Type is selected
+    } else if(document.Form.selectType.value == "empty"){
+        document.Form.selectType.focus();
+        document.getElementById("divMessage").innerHTML = "Type of Food is required"
+        return false;
+//check if Stall Name field is empty
+    } else if(document.Form.txtStallName.value == ""){
+        document.Form.txtStallName.focus();
+        document.getElementById("divMessage").innerHTML = "Stall Name of Food is required"
+        return false;
+
+//verify Halal field is checked
+    } else if((!document.getElementById("halal_Yes").checked) 
+                && (!document.getElementById("halal_No").checked)){
+        document.getElementById("divMessage").innerHTML = "Indicate if Food item is halal is required"
+        return false;
+
+ //check if Price field is empty or contains letters                   
+    } else if((document.Form.txtPrice.value == "") || (document.Form.txtPrice.value.match(letters)) ){
+        document.Form.txtPrice.focus();
+        document.getElementById("divMessage").innerHTML = "Price of Food is required in numbers only"
+        return false;
+
+ //check if text description field is empty 
+    } else if(document.Form.txtDescription.value == ""){
+        document.Form.txtDescription.focus();
+        document.getElementById("divMessage").innerHTML = "Description of Food is required"
+        return false;
+
+    } else {
+        return true;
+    }
+}
+</script>
+</head>
+<body>
+<div id="div_main">
+	<h1>
+		Add New Food Item
+	</h1>
+	<hr>
+	<!--Call javascript function upon pressing submit button-->
+	<form action="process.html" name = "Form" method="POST" onsubmit="return(verifyInput());">
+	<div id="div_left">
+		<p>Name:</p>
+		<p>Type:</p>
+		<p>Stall Name:</p>
+		<p>Halal:</p>
+		<p>Price ($):</p>
+	</div>
+	<div id="div_right">
+		<p>
+			<input type="text" id="txtProductName" name="txtProductName">
+		</p>
+
+		<p>
+		<select id="selectType" name= "selectType">
+			<option value= "empty"> Select a Type</option>
+			<option value="western">Western</option>
+			<option value="malay">Malay</option>
+			<option value="indian">Indian</option>
+			<option value="chinese">Chinese</option>
+		</select>
+		</p>
+
+		<p>
+			<input type="text" id="txtStallName" name="txtStallName">
+		</p>
+
+		<p>
+			<input type="radio" id="halal_Yes" name="halal">
+			<label for="halal_Yes">Yes</label>
+			<input type="radio" id="halal_No"name= "halal">
+			<label for="halal_No">No</label>
+		</p>
+
+		<p>
+			<input type="text" id="txtPrice" name="txtPrice">
+		</p>
+	</div>
+
+	<div class="clear"></div>
+	Description:
+	<br>
+	<textarea id="txtDescription" name="txtDescription"></textarea>
+	<br>
+	<br>
+	<input type="submit" id="btnSubmit">
+	</form>
+
+	<div id="divMessage">
+	
+	</div>
+</div>
+</body>
+</html>

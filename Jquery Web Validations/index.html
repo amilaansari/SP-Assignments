@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>	
+	h1 {
+		color: #7157ff;
+	}
+
+	hr {
+		display: block;
+		border: 0;
+		border-top: 3px solid #f90;
+		padding: 0; 
+	}
+	
+	textarea {
+		width: 70%;
+	}
+	
+	#div_main {
+		font-family: Sans-serif;
+		margin: auto;
+		margin-top: 30px;
+		width: 500px;
+	}
+	
+	#div_left {
+		width: 150px;
+		display: inline-block;
+		float: left;
+	}
+	
+	#div_left p {
+		margin-bottom: 19px;
+	}
+	
+	#div_right {
+		width: 350px;
+		display: inline-block;
+		float: right;
+	}
+	
+	.clear {
+		clear: both;
+	}
+</style>
+<script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+
+$(function(){
+//PRICE, only allow numbers(0-9), decimal point(.) and dollar sign($) to be entered into price textbox
+//ASCII codes: 36 -($), 46 -(.), 48-57 -(0-9)
+$("#price").on("keypress", function(noLetters){
+	if ( !(noLetters.keyCode == 46 || noLetters.keyCode == 36) && (noLetters.keyCode < 48 || noLetters.keyCode > 57) ) {
+		return false; 
+	}
+});
+
+//DESCRIPTION, track number of characters entered into description text area
+$("#description").on("input", function(){
+	var keycount = $("#description").val().length;
+	$("#charCount").text(keycount); 
+});
+
+//return textboxes(productName, stallName, price), select type, textarea to white
+$(":text").on("click", function(){
+	$(this).css("background-color", "white");	
+})
+
+$("#selectType").on("click", function(){
+	$(this).css("background-color", "white");	
+})
+
+$("textarea").on("click", function(){
+	$(this).css("background-color", "white");	
+})
+
+//form check at point of submission
+$("#form").submit(function(){
+//PRODUCT NAME, check for empty textbox field
+	if ( $("#productName").val() == "" ){
+		$("#productName").css("background-color", "yellow");
+		$("#divMessage").html("Name of Food is required.");
+		return false; 
+	}
+
+//SELECT TYPE, check for empty selection field	
+	if ( $("#selectType").val() == "empty" ){
+		$("#selectType").css("background-color","yellow");
+		$("#divMessage").html( "Type of Food is required.");
+		return false; 
+	}
+
+//STALL NAME, check for empty textbox field	
+	if ( $("#stallName").val() == "" ){
+		$("#stallName").css("background-color", "yellow");
+		$("#divMessage").html("Stall Name of Food is required.");
+		return false; 
+	}
+
+//HALAL, check if either radio button is selected
+	if ( !$(":radio").is(":checked") ){
+		$("#divMessage").html("Indicate if Food item is halal is required.");
+		return false; 
+	}
+	
+//PRICE, check for empty textbox field
+	if ( $("#price").val() == "" ){
+		$("#price").css("background-color","yellow");
+		$("#divMessage").html("Price of Food is required.");
+		return false; 
+	}
+
+//PRICE, limit number of decimal points
+	if ($("#price").val().split(".").length > 2 ){
+		$("#price").css("background-color","yellow");
+		$("#divMessage").html("Price of Food should contain ONLY ONE decimal point.");
+		return false;
+	}
+
+//PRICE, limit number of $
+if ($("#price").val().split("$").length > 2 ){
+		$("#price").css("background-color","yellow");
+		$("#divMessage").html("Price of Food should contain ONLY ONE dollar sign.");
+		return false;
+	}
+
+//PRICE, remove $ from input
+	if ( !$("#price").val().indexOf("$" ) == -1 ) {
+		$("#price").val( $("#price").val().replace("$", "") ); 
+	}
+
+//DESCRIPTION, check for empty textbox field
+	if ( $("#description").val() == "" ){
+		$("#description").css("background-color","yellow");
+		$("#divMessage").html("Description of Food is required.");
+		return false; 
+	}
+
+//Validation complete
+	else {
+		return true; 
+	}
+});	
+
+});	
+</script>
+</head>
+<body>
+<div id="div_main">
+	<h1>
+		Add New Food Item
+	</h1>
+	<hr>
+	<form action="process.html" id= "form" name = "Form" method="POST">
+	<div id="div_left">
+		<p>Name:</p>
+		<p>Type:</p>
+		<p>Stall Name:</p>
+		<p>Halal:</p>
+		<p>Price ($):</p>
+	</div>
+	<div id="div_right">
+		<p>
+			<input type="text" id="productName" name="ProductName">
+		</p>
+
+		<p>
+		<select id="selectType" name= "selectType">
+			<option value= "empty"> Select a Type</option>
+			<option value="western">Western</option>
+			<option value="malay">Malay</option>
+			<option value="indian">Indian</option>
+			<option value="chinese">Chinese</option>
+		</select>
+		</p>
+
+		<p>
+			<input type="text" id="stallName" name="StallName">
+		</p>
+
+		<p>
+			<input type="radio" id="halal_Yes" name="halal" value="yes">
+			<label for="halal_Yes">Yes</label>
+			<input type="radio" id="halal_No"name= "halal" value="no">
+			<label for="halal_No">No</label>
+		</p>
+
+		<p>
+			<input type="text" id="price" name="Price">
+		</p>
+	</div>
+
+	<div class="clear"></div>
+	Description:
+	<br>
+	<textarea id="description" name="Description"></textarea>
+	<br>
+	<label style = "font-size: smaller;"> Characters Entered: <span id= "charCount"></span> </label>
+	<br>
+	<br>
+	<div id="divMessage" style="font-weight: bolder; color: red"></div>
+	<input type="submit" id="submit" style = "font-size: medium; ">
+	</form>
+	<br>
+	
+	
+	</div>
+</div>
+</body>
+</html>
