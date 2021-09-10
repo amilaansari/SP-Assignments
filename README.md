@@ -15,8 +15,7 @@ In this assignment, I was tasked to develop the backend of a website that would 
 In this assignment, I was tasked to use Bootstrap to modify my redesign of an existing food delivery website (see HTML, CSS Web Design) to enhance its responsiveness.
 - HTML Tables were used to store menu data
 - HTML Forms were used to collect information from the user.
-- Bootstrap containers and jumbotrons were used to contain various HTML fields such as the navigation bar, footer and menu sections/tabs.
-
+- Bootstrap containers, jumbotrons, cards were used to contain various HTML fields such as the navigation bar, footer and menu sections/tabs.
 
 ## Full Stack Web Application
 In this assignment, I was tasked to create a full stack web application with HTML, CSS, Javascript/Jquery, Python/Flask, MySQL that would allow a user to view and retrieve the menu of "SP Food Court 6"
@@ -25,7 +24,9 @@ In this assignment, I was tasked to create a full stack web application with HTM
 ## HTML, CSS Web Design
 *Disclaimer: This design contains images and data that are not my own and are taken from http://yijiasouthvillage.com.sg/. My website redesign is not intended to be used/accessed by the general public under any condition as a replacement to the original website, and is not approved by the original owners of food delivery website. Any information used may be inaccurate or out-of-date, and is used only for the purposes of meeting the assignment criteria and/or to display my ability in Web Design. No Copyright Infrignment is intended.*
 
-In this assignment, I was tasked to "redesign" an existing food delivery website. Tables were used to store menu data, Forms were used to collect information from the user.
+In this assignment, I was tasked to "redesign" an existing food delivery website. 
+- I designed Tables with HTML to store menu data, 
+- HTML Forms were used to collect information from the user.
 
 
 ## JavaScript Web Validations
@@ -51,3 +52,9 @@ Additionally, a counter was added to the "Description" text area to track the nu
 
 ## Python Menu Programme
 In this assignment, I was tasked to create a "menu" that would be deployed and navigated within the terminal. This was an exercise that employed classes, objects, functions, for loops, while loops, if/else statements, lists/arrays and reading files.
+
+## Website Wireframe Design
+*Disclaimer: This design contains images and data that are not my own and are taken from http://yijiasouthvillage.com.sg/. My website redesign is not intended to be used/accessed by the general public under any condition as a replacement to the original website, and is not approved by the original owners of food delivery website. Any information used may be inaccurate or out-of-date, and is used only for the purposes of meeting the assignment criteria and/or to display my ability in Web Design. No Copyright Infrignment is intended.*
+
+In this assignment, I was tasked to display my "redesign" of an existing food delivery website using Adobe XD. A basic wireframe was built initially, upon which colour, images and increased functionality was added. 
+
